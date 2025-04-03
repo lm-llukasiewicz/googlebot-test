@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <a href="#">Link</a>
+    <script>
+        const baseUrl = 'aHR0cHMlM0ElMkYlMkZwbC5sYXN0bWludXRlLmNvbSUyRnMlMkZoZHAlMkZob3RlbC1kZXRhaWxzJTJGQmFyY2Vsby1SYXZhbC0yNDE2NjYwJTJGaG90ZWwtb25seSUzRmJ1c2luZXNzUHJvZmlsZUlkJTNESE9MSURBWVNMQVNUTUlOVVRFUEwlMjZzZWFyY2guZGVwYXJ0dXJlSW50ZXJ2YWxzJTNEMjAyNTA3MDktMjAyNTA3MTMlMjZzZWFyY2gudHlwZSUzRE9TRSUyNnNlYXJjaC5yb29tcyUyNTVCMCUyNTVELmFkdWx0cyUzRDIlMjZtZWFscGxhbiUzRCUyNnNlYXJjaC5hY2NvbW9kYXRpb25Pbmx5JTNEZmFsc2UlMjZzZWFyY2guZGVwYXJ0dXJlQWlycG9ydHMlM0QlMjZjdXJyZW5jeSUzRFBMTiUyNnNlYXJjaC5kZXN0aW5hdGlvbkNpdGllcyUzRDEzNjI4NCUyNmNoZWNraW4lM0QyMDI1MDcwOSUyNmNoZWNrb3V0JTNEMjAyNTA3MTM=';
+        const link = document.querySelector('a');
+        function focusHandler(e) {
+            const decodedUrl = decodeURIComponent(atob(baseUrl));
+            e.target.href = decodedUrl;
+        };
+        link.addEventListener('focus', focusHandler, { once: true });
+    </script>
+</body>
+</html>
